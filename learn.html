@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanah website</title>
+    <!--link css  -->
+    <link rel="stylesheet" href="learn.css">
+    
+    <!-- fontawesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- favicon -->
+       <link rel="shortcut icon" href="Amanah (1).png" type="image/x-icon">
+</head>
+<body>
+   
+    <!-- start header -->
+     <header id="header">
+<nav class="navbar">
+    <a href="#home-page"><img src="logo.png.png" alt="Amanah" class="logo1"></a>
+    
+    <input type="checkbox" id="menu-bug" style="display: none;">
+    
+    <label for="menu-bug" class="bars-icon" style="display: none;">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <ul class="nav-link">
+        <li><a href="#home-page"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#report-page"><i class="fas fa-file-alt"></i> Reports</a></li>
+        <li><a href="profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+        <li><a href="sign.html"><i class="fas fa-sign-in-alt"></i> login</a></li>
+    </ul>
+</nav>
+     </header>
+    <!-- end header -->
+     <!-- main start=============================================== -->
+     <main>
+    <!-- صفحة الهوم: 3 أعمدة -->
+    <section id="home-page" class="section-container">
+        <div class="container">
+            
+            <div class="columns-wrapper">
+              <div class="white-box">
+                  <h3 class="blue-text">✅ المـرتجعات</h3>
+                  <div id="return-list" class="list-content"><p class="empty">لا يوجد مرتجعات</p></div>
+              </div>
+              <div class="white-box">
+                <h3 class="green-text">✨ الموجــودات</h3>
+                <div id="found-list" class="list-content"><p class="empty">لا يوجد بلاغات</p></div>
+              </div>
+              <div class="white-box">
+                  <h3 class="red-text">🔍 المفقــودات</h3>
+                  <div id="lost-list" class="list-content"><p class="empty">لا يوجد بلاغات</p></div>
+              </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- صفحة البلاغات: الخانات العريضة -->
+    <section id="report-page" class="section-container" >
+        <div class="container">
+          <!-- تظبيط الاستسكر تمام ======= -->
+            <div class="main-title">
+              <img src="img3.png" alt="stecr" class="img">
+             
+            </div>
+        
+            <!-- تظبيط الخانات تمام  -->
+            <form id="lost-found-form" class="wide-form">
+                <div class="input-group">
+                    <label>:نوع البلاغ</label>
+                    <select id="in-type" class="styled-input">
+                        <option value="lost">مفقود</option>
+                        <option value="found">موجود</option>
+                        <option value="return">مرتجع (تم التسليم)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>ما هو الشيء؟</label>
+                    <input type="text" id="in-name" placeholder="اسم الحاجة" class="styled-input">
+                </div>
+
+                <div class="input-group">
+                    <label>:المكان</label>
+                    <input type="text" id="in-place" placeholder="أين ومتى؟" class="styled-input">
+                </div>
+
+                <div class="input-group" id="availability-group" style="display: none;" >
+                   <label>:مكان التواجد الحالي</label>
+                   <input type="text" id="in-availability" placeholder="مثلاً: في مكتب الأمن" class="styled-input">
+                </div>
+
+                <button type="submit" class="submit-btn">نشر الآن</button>
+                <p id="success-msg" class="success-msg" style="color: rgba(43, 216, 40, 0.785); display: none;">تم النشر بنجاح! </p>
+            </form>
+        </div>
+    </section>
+  
+     
+</main>
+<script src="learn.js"></script>
+</body>
+</html>

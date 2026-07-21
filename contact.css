@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #f5f7fa;
+ 
+}
+/* ====================== */
+
+/* للكلام الإنجليزي */
+.en{
+    direction: ltr;
+    text-align: left;
+    display: inline-block;
+} 
+/* =========================== */
+.header,a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    display: block;
+  
+    text-align: right;
+    margin-bottom: 80px;
+    
+}
+.header {
+  background-color: #186f09e9;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  animation: fadeDown 1s ease;
+  position: relative;
+}
+.header h2 {
+  margin: 0;
+  font-size: 32px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.row input {
+  flex: 1;
+  min-width: 150px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border-color:#186f09e9;
+
+  outline: none;
+  box-shadow: 0 0 5px rgba(62, 161, 84, 0.849);
+}
+textarea {
+  height: 130px;
+  resize: none;
+}
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #238d2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color:#186f09e9;
+}
+.info-card {
+  width: 320px;
+  flex: 1;
+}
+.form-card {
+  flex: 2.2;
+  padding: 35px; /* يخليها أكبر من التانية */
+}
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 18px 0;
+}
+.info-item i {
+  color: #2bad41;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.info-item strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+.form-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+.info-item p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* شات عملها كد بس عموما انا م فهماها Animationبصي ي اسماء دي  */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  اهي بس للنص الاول عشان انا عملت كل واحده واحدها وبعدين حطيتهم مع بعضResponsive ودي */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+/* دي بدايه النص اللي من تحت */
+.footer {
+  background: linear-gradient(135deg, #292e33, #186f09e9);
+  color: #fff;
+  padding: 30px 20px 20px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-box {
+  flex: 1;
+  min-width: 250px;
+}
+.footer h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00c3ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.footer p {
+  margin: 10px 0;
+  color: #ccc;
+}
+.footer i {
+  color: #fff;
+  margin-left: 8px;
+}
+.phone {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.phone span {
+  font-size: 13px;
+  color: #888;
+}
+.phone:hover {
+  color: #00c3ff;
+  transform: translateX(-5px);
+}
+.phone:hover i {
+  text-shadow: 0 0 10px #00c3ff;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #00c3ff;
+}
+.social {
+  margin-top: 15px;
+}
+.social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: #1a2f45;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #fff;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+.social a:hover {
+  background: #00c3ff;
+  transform: scale(1.1);
+}
+.social a.facebook-icon {
+  background-color: #1877f2;
+}
+.social a.email-icon {
+  background-color: #ff3b30;
+}
+.bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #1f3a50;
+  padding-top: 15px;
+  color: #aaa;
+}
+.center {
+  text-align: center;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  border: 2px solid #00c3ff;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+  transition: 0.3s;
+  animation: glow 2s infinite alternate;
+  /* دي مخليه السطوع اللي ع اللوجو ولو عايزه تشيليها مفيش مشكله */
+}
+/* بصي دي بتعمل شويه حركات كده  */
+.logo:hover {
+  transform: scale(1.1);
+}
+.center h3 {
+  margin-top: 5px;
+}
+/*   بصي دي بنضيفها كحاجه تبين الصفحه حلوه يعني اللي مخليه اللوجو ينور عموما */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #00c3ff;
+  }
+  to {
+    box-shadow: 0 0 20px #00c3ff;
+  }
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.center h3 {
+  margin: 0;
+}
+.extra-info {
+  margin-top: 30px;
+}
+.orange-title {
+  color: #f5f2ef;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.university-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+/* عشان اغير اللون اول م احط الماوس */
+.university-link:hover {
+  color: #00bcd4;
+  border-color: #00bcd4;
+}
+.extra-info a {
+  display: block;
+  margin-top: 10px;
+}
+.contact-label {
+  color: #308d8f !important;
+  font-weight: bold;
+  margin-top: 15px !important;
+  margin-bottom: 5px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* حاولي تستنتجيها لما ترني عشان نلغي الخلفية الدائرية للأيقونات اللي جنب الكلمات دي بس وبتاعت ايمبورتانت شات قالي بس مش عارفه لازمتها الصراحه*/
+.contact-label i {
+  background: transparent !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  font-size: 1.1rem;
+}
+.footer-box p:not(.contact-label) {
+  padding-right: 5px; 
+  margin: 5px 0;
+}

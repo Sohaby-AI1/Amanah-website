@@ -1,0 +1,326 @@
+
+
+*{ 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-image:url(img.png);
+   
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+ /* body{
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: left;
+} */
+ /* للموبايل والشاشات الصغيرة فقط */
+@media (max-width: 768px) {
+    
+    .container {
+        flex-direction: column !important; /* هيقلب عمودي في الموبايل بس */
+        height: auto !important; /* بنخليه مرن في الموبايل عشان الشاشة تكفي طولياً */
+        margin: 20px auto !important;
+        padding: 20px;
+    }
+
+    /* بنلغي الـ padding الكبيرة اللي كانت زقة الاستيكر في الموبايل */
+    .main-title {
+        padding-left: 0 !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    /* حجم الاستيكر في الموبايل عشان ميبقاش ضخم */
+    .main-title img {
+        width: 100% !important;
+        max-width: 280px; 
+        margin-bottom: 20px;
+    }
+
+    /* الفورم يفرش بعرض الشاشة في الموبايل عشان الخانات تبان */
+    .wide-form {
+        width: 100% !important;
+        max-width: 100%;
+        margin-right: 0 !important;
+    }
+}
+/* =================== تظبيط الناف  بار تكام ===================*/
+
+
+للكلام الإنجليزي 
+ .en{
+    direction: ltr;
+    text-align: left;
+    display: inline-block;
+} 
+
+/* ======utility classes======= ثوابت============ */
+.container {
+   width: 90%;
+   height:85vh;
+   background-image:linear-gradient(rgba(249, 246, 246, 0.464),rgba(18, 19, 18, 0.382)) ;
+   margin: 40px;
+     display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 25px;
+   margin-top: 60px;
+  
+
+}
+section{
+    width: 100%;
+    height: 100%;
+    background-color: #304a30f4;
+      display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ================================= */
+#header{
+    position: fixed;
+    background-color: rgba(19, 20, 19, 0.874);
+    width: 100%;
+    
+}
+
+ul{list-style: none;
+       width: 45%;}
+a{
+  text-decoration: none;
+}   
+#header .navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: auto;
+height: 50px;
+margin-top: 5px;
+}
+.navbar{
+    height: 50px;
+}
+
+#header.navbar,.logo1{
+    width: 270px;
+
+} 
+#header.navbar,.nav-link{
+    display: flex;
+    margin-bottom: 12px;
+    gap:50px
+}
+#header.navbar,.nav-link  ,li a{
+   display: flex;       /* يخلي الأيقونة والكلمة جنب بعض */
+    flex-direction: row; /* التأكيد على وضعهم جنب بعض وليس فوق بعض */
+    align-items: center; /* محاذاة في المنتصف عمودياً */
+    color: white;        
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+.nav-links, i {
+    margin-right: 3px;   /* مسافة بين الأيقونة والكلمة */
+    font-size: 18px;     /* حجم الأيقونة */
+    transition: transform 0.1s ease; /* سرعة التكبير */
+}
+#header.navbar,.nav-link ,li a:hover{
+    color: rgb(123, 245, 57);
+}
+/* ================================= home & reports=========== */
+* حل مشكلة التداخل وحدود الصفحة */
+.section-container {
+    width: 100%;
+    min-height: 80vh; /* عشان الصفحة متقصرش وتخرج من الخلفية */
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+
+
+/* العنوان "محلولة ان شاء الله" فوق الأعمدة */
+/* .top-title {
+    color: #32CD32;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+} */
+
+/* تنسيق الـ 3 أعمدة */
+.columns-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* عشان لو الشاشة صغرت ميتداخلوش */
+    width: 100%;
+    margin: 30px;
+ }
+
+.white-box {
+    flex: 1;
+    background-color: rgb(242, 238, 238);
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 100%;
+    min-height: 400px;
+    max-height:500px;
+    box-shadow: 0 2px 11px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.list-content{
+    overflow-y: auto;
+    max-height:300px ;
+}
+
+/* تنسيق فورم البلاغات (خانات عريضة) */
+.wide-form {
+    max-width: 800px; /* كبرنا العرض الكلي للفورم */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.input-group label {
+    color: white;
+    margin-bottom:8px;
+    font-weight: bold;
+    }
+/* #availability-group{
+     display: flex;
+    flex-direction: column;
+    text-align: right;
+}*/
+
+
+
+
+
+/* الخانات بالبوردر والعرض الكبير */
+.styled-input {
+    width: 100%; /* العرض كامل جوه الفورم */
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid #56ce52; /* البوردر الأخضر الواضح */
+    background-color: rgb(255, 253, 253);
+    font-size: 1.1rem;
+    box-sizing: border-box;
+}
+/* .main-title{
+    background-image: url(img3.png);
+    background-repeat: no-repeat;
+   background-size: cover;
+    height: 90vh;
+   background-position: center;
+    text-align: center;
+    width: 0%;
+    padding-left: 600px;
+} */
+ /* =======================تظبيط الاستيكر============================== */
+ .main-title img{
+  width: 90%;
+  max-width: 700px;
+ margin-bottom: 50px;
+ }
+ .wide-form{
+  width: 50%;
+  margin-right: 20px;
+  height: auto;
+ }
+
+
+.container h1{
+       font-size: 50px;
+    color: rgb(255, 255, 255);
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.submit-btn {
+    background-color: #32CD32;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover { background-color: #28a428; }
+
+/* شكل كارت البلاغ في الهوم */
+.item-card {
+    background: #f8f9fa;
+    border-right: 5px solid #32CD32;
+    padding: 15px;
+    margin-top: 15px;
+     border-radius: 8px;
+    text-align: right;
+}
+/* ====================checkbox================= */
+@media (max-width: 1300px) {
+    
+    /* اظهر أيقونة الـ 3 شرط ونورها */
+    .bars-icon {
+        display: block !important;
+        color: white !important;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: relative !important;
+    }
+
+    /* 🛠️ التعديل الجديد والمظبوط للقائمة المنسدلة 🛠️ */
+    .nav-link {
+        display: none !important; 
+        flex-direction: column !important;
+        position: absolute !important;
+        
+        top: 50px;          /* 1. بتنزل تحت شريط الناف بار بالظبط */
+        right: 10px;        /* 2. التعديل السحري: نقلناها على اليمين وسبنا مسافة شياكة */
+        left: auto;         /* بنلغي أي اتجاه شمال قديم */
+        
+        width: 180px;       /* 3. صغرنا العرض عشان تبقى مستطيل صغير وكيوت مش مالية الشاشة */
+        background-color: rgba(0, 0, 0, 0.822) !important; 
+        
+        padding: 15px !important; 
+        gap: 15px !important;
+        border-radius: 10px; /* 4. دورنا الحواف بتاعة المستطيل الصغير */
+        z-index: 9999 !important;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* ضل خفيف يحدد المستطيل */
+    }
+
+    /* تشغيل القائمة لما يتعمل checked */
+    #menu-bug:checked ~ .nav-link {
+        display: flex !important;
+    }
+    
+    /* تنسيق الكلام والأيقونات جوه المستطيل الصغير */
+    .nav-link li {
+        width: 100%;
+        text-align: right; /* يخلي الكلام محاذي لليمين جوه المستطيل */
+    }
+
+    .nav-link li a {
+        font-size: 16px !important; /* صغرنا حجم الخط شوية عشان يناسب المستطيل */
+        justify-content: flex-start; /* يخلي الأيقونة والكلمة يبدأوا من اليمين للشمال */
+    }
+}

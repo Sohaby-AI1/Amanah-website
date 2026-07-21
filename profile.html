@@ -1,0 +1,113 @@
+
+    <!-- ======================Profile ====================start============== -->
+   
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملف الشخصي - أمانة</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- ملف التنسيقات الخاص -->
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+      <a href="learn.html" class="profile"><i class="fas fa-home"></i> Home</a>
+  <div class="container">
+    <!-- هيدر الموقع -->
+    <div class="app-header">
+      <i class="fa-solid fa-hand-holding-heart"></i>
+      <span>أمانة</span>
+    </div>
+
+    <!-- بطاقة البروفايل -->
+    <div class="profile-card" id="profileCard">
+      <div class="avatar" id="profileAvatar">?</div>
+      <div class="user-info">
+        <h2 id="displayName">غير محدد</h2>
+        <p><i class="fa-solid fa-building-columns"></i> <span id="displayFaculty">غير محدد</span></p>
+        <p><i class="fa-solid fa-envelope"></i> <span id="displayEmail">غير محدد</span></p>
+        <p><i class="fa-solid fa-phone"></i> <span id="displayPhone">غير محدد</span></p>
+      </div>
+      <button class="edit-btn" onclick="openEditProfile()"><i class="fa-solid fa-pen-to-square"></i> تعديل</button>
+    </div>
+
+    <!-- الإحصائيات -->
+    <div class="stats" id="statsContainer"></div>
+
+    <!-- التبويبات -->
+    <div class="tabs">
+      <div class="tab active" data-tab="lost" onclick="switchTab('lost')"><i class="fa-solid fa-magnifying-glass"></i> مفقوداتي</div>
+      <div class="tab" data-tab="found" onclick="switchTab('found')"><i class="fa-solid fa-box-open"></i> موجوداتي</div>
+      <div class="tab" data-tab="notifications" onclick="switchTab('notifications')"><i class="fa-solid fa-bell"></i> التنبيهات</div>
+    </div>
+
+    <!-- محتوى التبويب -->
+    <div class="content-panel" id="tabContent"></div>
+  </div>
+
+  <!-- مودال تعديل البروفايل -->
+  <div class="modal" id="editProfileModal">
+    <div class="modal-content">
+      <h3>تعديل الملف الشخصي</h3>
+      <div class="form-group">
+        <label>الاسم الكامل</label>
+        <input type="text" id="editName" placeholder="أدخل اسمك">
+      </div>
+      <div class="form-group">
+        <label>الكلية</label>
+        <input type="text" id="editFaculty" placeholder="مثال: كلية الهندسة">
+      </div>
+      <div class="form-group">
+        <label>البريد الجامعي</label>
+        <input type="email" id="editEmail" placeholder="example@university.edu">
+      </div>
+      <div class="form-group">
+        <label>رقم الهاتف</label>
+        <input type="text" id="editPhone" placeholder="01xxxxxxxxx">
+      </div>
+      <div class="modal-buttons">
+        <button class="btn btn-outline" onclick="closeEditProfile()">إلغاء</button>
+        <button class="btn edit-btn" onclick="saveProfile()">حفظ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال إضافة بلاغ -->
+  <div class="modal" id="addItemModal">
+    <div class="modal-content">
+      <h3 id="addItemTitle">إضافة مفقود</h3>
+      <input type="hidden" id="addItemType" value="lost">
+      <div class="form-group">
+        <label>اسم الغرض</label>
+        <input type="text" id="addItemName" placeholder="مثال: هاتف سامسونج">
+      </div>
+      <div class="form-group">
+        <label>التاريخ</label>
+        <input type="date" id="addItemDate">
+      </div>
+      <div class="modal-buttons">
+        <button class="btn btn-outline" onclick="closeAddItem()">إلغاء</button>
+        <button class="btn edit-btn" onclick="addItem()">إضافة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال تأكيد الحذف -->
+  <div class="modal" id="deleteModal">
+    <div class="modal-content">
+      <h3>تأكيد الحذف</h3>
+      <p style="text-align:center;">هل أنت متأكد من حذف هذا البلاغ؟</p>
+      <div class="modal-buttons">
+        <button class="btn btn-outline" onclick="closeDeleteModal()">إلغاء</button>
+        <button class="btn btn-danger" id="confirmDeleteBtn">حذف</button>
+      </div>
+    </div>
+  </div>
+
+ 
+ <!-- ======================Profile ====================end============== -->
+  <script src="profile.js"></script> 
+</body>
+</html>
